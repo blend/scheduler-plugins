@@ -18,7 +18,7 @@ jobs:
          token: ${{ secrets.GITHUB_TOKEN }}
       id: install
     - name: Package Helm Chart
-      if: ${{ github.repository == 'kubernetes-sigs/scheduler-plugins' }}
+      if: ${{ github.repository == 'blend/scheduler-plugins' }}
       run: |
         helm package ./manifests/install/charts/as-a-second-scheduler
     - name: Upload to Release
